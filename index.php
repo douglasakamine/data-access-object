@@ -16,9 +16,15 @@ echo json_encode($search);*/
 $usuarios = $pesquisa->select("SELECT * FROM tb_usuarios WHERE idusuario = :ID", array(":ID"=>4));
 echo json_encode($usuarios);*/
 
-$usuario = new Usuario();  // carrega o usuario por login e senha
-$usuario->login("jose","123445678");
+//$usuario = new Usuario();  // carrega o usuario por login e senha
+//$usuario->login("jose","123445678");
+//echo $usuario;
 
-echo $usuario;
+
+$aluno = new Usuario();
+$aluno->setDeslogin("aluno");
+$aluno->setDessenha("@alun0");
+$aluno->insert();
+echo $aluno;
 
 ?>
