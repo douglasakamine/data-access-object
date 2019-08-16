@@ -6,7 +6,8 @@ class Sql extends PDO {  // Classe Sql herda da classe PDO que é classe nativa 
 
 	public function __construct(){ //Metodo construtor é chamado automaticamente quando a classe é instanciada
 
-		$this->conn = new PDO("sqlsrv:Database=dbphp7;server=localhost\SQLEXPRESS;ConnectionPooling=0","sa","root");
+	 // $this->conn = new PDO("sqlsrv:Database=dbphp7;server=localhost\SQLEXPRESS;ConnectionPooling=0","sa","root");  // SQL SERVER
+		$this->conn = new PDO("mysql:dbname=dbphp7;host=localhost", "root", "");   //MYSQL
 	}
 
 	private function setParams($statement, $parameters = array()){   // funcao de setar multiplos parametros, chamado pelo metodo query

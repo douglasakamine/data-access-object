@@ -6,25 +6,30 @@ require_once("config.php");
 $root->loadById(3);
 echo $root;*/
 
-/*$lista = Usuario::getList();    //carrega lista de usuario
-echo json_encode($lista);*/ 
+/*  $lista = Usuario::getList();    //carrega lista de usuario
+echo json_encode($lista);   */ 
 
-/*$search = Usuario::search("jo");
-echo json_encode($search);*/
+/*  $search = Usuario::search("jo");
+echo json_encode($search);  */
 
-/*$pesquisa = new Sql();   
+/*  $pesquisa = new Sql();   
 $usuarios = $pesquisa->select("SELECT * FROM tb_usuarios WHERE idusuario = :ID", array(":ID"=>4));
-echo json_encode($usuarios);*/
+echo json_encode($usuarios);   */
 
 //$usuario = new Usuario();  // carrega o usuario por login e senha
 //$usuario->login("jose","123445678");
 //echo $usuario;
 
 
-$aluno = new Usuario();
-$aluno->setDeslogin("aluno");
-$aluno->setDessenha("@alun0");
+/*  $aluno = new Usuario();
 $aluno->insert();
-echo $aluno;
+echo $aluno;   */
+
+$usuario = new Usuario();
+$usuario->loadById(8);
+$usuario->update("professor","ij434534jk");
+echo $usuario;
+
+
 
 ?>
